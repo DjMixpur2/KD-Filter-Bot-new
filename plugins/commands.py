@@ -75,7 +75,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    '↺ Jᴏɪɴ Oᴜʀ Bᴀᴄᴋ-ᴜᴘ Cʜᴀɴɴᴇʟ ↺', url="https://t.me/netflixvilla_india")
+                    "↺ Jᴏɪɴ Oᴜʀ Bᴀᴄᴋ-ᴜᴘ Cʜᴀɴɴᴇʟ ↺", url=invite_link.invite_link)
                 )
             ]
         ]
