@@ -13,9 +13,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '23762978'))
-API_HASH = environ.get('API_HASH', 'eff30dac5504a8660e69bfe19f668571')
-BOT_TOKEN = environ.get('BOT_TOKEN', "6540032672:AAEIgd9hfwN-UburGSmJbrkMf0UM3-AR1ts")
+API_ID = int(environ.get('API_ID', '12850056'))
+API_HASH = environ.get('API_HASH', '15564ec4a1a2cbef87c99a9aa9e40b34')
+BOT_TOKEN = environ.get('BOT_TOKEN', "6190726108:AAFiAEPAbjyVd3IU0MljaB3OF2aIX0Qqlo8")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -29,9 +29,9 @@ VRFIED_IMG = environ.get("VRFIED_IMG", "https://graph.org/file/2f7b5a8b0d33102d1
 VRFY_IMG = environ.get("VRFY_IMG", "https://graph.org/file/2f7b5a8b0d33102d19c8d.jpg")
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1216307744').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '770434685').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001394587233').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '0').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '770434685').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
 auth_channel = environ.get('AUTH_CHANNEL')
@@ -45,7 +45,7 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://hebapir376:ravi1234@cluster0.x9pmpfx.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://renamebot59:7872278427kd@cluster0.r3x0hwl.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'EvaMaria')
 
@@ -65,12 +65,12 @@ TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Netflixvilla_india/46')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', 'https://t.me/+PkQmIhZMVDxhZmVl')
 MSG_ALRT = environ.get('MSG_ALRT', 'Wʜᴀᴛ Aʀᴇ Yᴏᴜ Lᴏᴏᴋɪɴɢ Aᴛ ?')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001940288450'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001933509863'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Netflixvilla_india')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), False)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
-AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
+AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "False")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CAPTION}")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
