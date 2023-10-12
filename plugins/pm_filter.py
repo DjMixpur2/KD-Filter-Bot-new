@@ -43,7 +43,7 @@ BUTTONS0 = {}
 BUTTONS1 = {}
 BUTTONS2 = {}
 SPELL_CHECK = {}
-ADMIN_USRNM = "netflix_india_007"
+ADMIN_USRNM = "KD_Bhai_Admin"
 # ENABLE_SHORTLINK = ""
 
 @Client.on_message(filters.group | filters.private & filters.text & filters.incoming)
@@ -67,7 +67,7 @@ async def give_filter(client, message):
         if total_results == 0:
             return
         else:
-            return await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}. \n\nTʜɪs ɪs ᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\nJᴏɪɴ ᴀɴᴅ Sᴇᴀʀᴄʜ Hᴇʀᴇ - @netflixvilla_india</b>")
+            return await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}. \n\nTʜɪs ɪs ᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\nJᴏɪɴ ᴀɴᴅ Sᴇᴀʀᴄʜ Hᴇʀᴇ - @KD_Bhai_Admin</b>")
 
 # @Client.on_message(filters.private & filters.text & filters.incoming)
 # async def pm_text(bot, message):
@@ -77,8 +77,8 @@ async def give_filter(client, message):
 #     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
 #     if user_id in ADMINS: return # ignore admins
 #     await message.reply_text(
-#          text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ <a href=https://telegram.me/netflixvilla_india>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>", disable_web_page_preview=True,
-#          reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"t.me/netflixvilla_india")]])
+#          text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ <a href=https://telegram.me/Krbackup>Backup Channel</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>", disable_web_page_preview=True,
+#          reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"t.me/KD_Bhai_Admin")]])
 #     )
 #     await bot.send_message(
 #         chat_id=LOG_CHANNEL,
@@ -153,7 +153,7 @@ async def next_page(bot, query):
         )
         btn.insert(0, [
             InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("", callback_data=f"sendfiles#{key}")
         ])
     else:
         btn = []
@@ -491,12 +491,12 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     # if ENABLE_SHORTLINK == True:
     btn.insert(0, [
         InlineKeyboardButton("sᴛᴀʀᴛ ʙᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-        InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥ʟ", callback_data=f"sendfiles#{key}")
+        InlineKeyboardButton("", callback_data=f"sendfiles#{key}")
     ])
     # else:
     #     btn.insert(0, [
     #         InlineKeyboardButton("sᴛᴀʀᴛ ʙᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-    #         InlineKeyboardButton("𝐒𝐞𝐧ᴅ 𝐀𝐥ʟ", callback_data=f"send_fall#{pre}#{key}#{offset}")
+    #         InlineKeyboardButton("", callback_data=f"send_fall#{pre}#{key}#{offset}")
     #     ])
     try:
         await query.edit_message_reply_markup(
@@ -660,7 +660,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
             for file in files
         ]
     btn.insert(0, [
-        InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥ʟ", callback_data=f"sendfiles#{key}"),
+        InlineKeyboardButton("", callback_data=f"sendfiles#{key}"),
         InlineKeyboardButton("Sᴇʟᴇᴄᴛ ᴀɢᴀɪɴ", callback_data=f"seasons#{key}")
     ])
     
@@ -961,9 +961,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                                 [
                                 [
                                     InlineKeyboardButton('↼ Rᴇǫᴜᴇsᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                                    InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ⇀', url='https://t.me/netflixvilla_india')
+                                    InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ⇀', url='https://t.me/krbackup')
                                 ],[
-                                    InlineKeyboardButton(" ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ ", url='https://t.me/netflixvilla_india')
+                                    InlineKeyboardButton(" ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ ", url='https://t.me/krbackup')
                                 ]
                                 ]
                             )
@@ -1062,8 +1062,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ident, keyword = query.data.split("#")
         #await query.message.edit_text(f"<b>Fetching Files for your query {keyword} on DB... Please wait...</b>")
         files, total = await get_bad_files(keyword)
-        await query.message.edit_text("<b>File deletion process will start in 5 seconds !</b>")
-        await asyncio.sleep(5)
+        await query.message.edit_text("<b></b>")
+        await asyncio.sleep()
         deleted = 0
         async with lock:
             try:
@@ -1383,7 +1383,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('↼ Eᴀʀɴ Mᴏɴᴇʏ', callback_data="shortlink_info"),
+                    InlineKeyboardButton('', callback_data="shortlink_info"),
                     InlineKeyboardButton('Mᴏᴠɪᴇ Gʀᴏᴜᴘ ⇀', url=GRP_LNK)
                 ],[
                     InlineKeyboardButton('↼ Hᴇʟᴘ', callback_data='help'),
@@ -1468,7 +1468,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('✉️ ᴀɴʏ ǫᴜᴇʀʏ ✉️', url='https://t.me/UNKNOWN_MAN_ON_MISSION')
+            InlineKeyboardButton('✉️ ᴀɴʏ ǫᴜᴇʀʏ ✉️', url='https://t.me/KD_Bhai_Admin')
         ], [
             InlineKeyboardButton('∙ ꜰɪʟᴛᴇʀs ∙', callback_data='filters'),
             InlineKeyboardButton('∙ ꜰɪʟᴇ sᴛᴏʀᴇ ∙', callback_data='store_file')
@@ -1787,7 +1787,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "owner_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="t.me/UNKNOWN_MAN_ON_MISSION")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="t.me/KD_Bhai_Admin")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1808,9 +1808,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             btn = [[
                     InlineKeyboardButton("↼ Mᴏᴠɪᴇ Sᴇᴀʀᴄʜ Gʀᴏᴜᴘ ⇀", url= GRP_LNK)
                 ],[
-                    InlineKeyboardButton("↼ ʙᴏᴛ ᴄʜᴀɴɴᴇʟ ⇀", url='https://t.me/netflixvilla_india')
+                    InlineKeyboardButton("↼ ʙᴏᴛ ᴄʜᴀɴɴᴇʟ ⇀", url='https://t.me/krbackup')
                 ],[
-                    InlineKeyboardButton("↼  Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ ⇀", url='https://t.me/netflixvilla_india')
+                    InlineKeyboardButton("↼  Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ ⇀", url='https://t.me/krbackup')
                 ],[
                     InlineKeyboardButton('♙ Hᴏᴍᴇ', callback_data='start'),
                     InlineKeyboardButton('Cʟᴏsᴇ ⊝', callback_data='close_data')
@@ -1858,7 +1858,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "shortlink_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/netflix_india_007")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KD_Bhai_Admin")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -2080,11 +2080,11 @@ async def auto_filter(client, msg, spoll=False):
     # else:
     #     btn.insert(0, [
     #         InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-    #         InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"send_fall#{pre}#{message.chat.id}-{message.id}#{0}")
+    #         InlineKeyboardButton("", callback_data=f"send_fall#{pre}#{message.chat.id}-{message.id}#{0}")
     #     ])
         btn.insert(0, [
             InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("", callback_data=f"sendfiles#{key}")
         ])
     # if ENABLE_TUTORIAL == True:
     #     btn.insert(0, [
@@ -2161,7 +2161,7 @@ async def auto_filter(client, msg, spoll=False):
                 cap += f"<b>\n📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.') and not x.startswith('tg') and not x.startswith('telegram'), file.file_name.split()))}\n</a></b>"
     else:
         if settings["button"]:
-            cap = f"<b>Tʜᴇ Rᴇꜱᴜʟᴛꜱ Fᴏʀ ☞ {search}\n\nRᴇǫᴜᴇsᴛᴇᴅ Bʏ ☞ {message.from_user.mention}\n\nʀᴇsᴜʟᴛ sʜᴏᴡ ɪɴ ☞ {remaining_seconds} sᴇᴄᴏɴᴅs\n\nᴘᴏᴡᴇʀᴇᴅ ʙʏ ☞ : {message.chat.title} \n\n⚠️ ᴀꜰᴛᴇʀ 5 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ 🗑️\n\n</b>"
+            cap = f"<b>Tʜᴇ Rᴇꜱᴜʟᴛꜱ Fᴏʀ ☞ {search}\n\nRᴇǫᴜᴇsᴛᴇᴅ Bʏ ☞ {message.from_user.mention}</b>"
         else:
             # cap = f"<b>Hᴇʏ {message.from_user.mention}, Hᴇʀᴇ ɪs ᴛʜᴇ ʀᴇsᴜʟᴛ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search} \n\n</b>"
             cap = f"<b>Hᴇʏ {message.from_user.mention}, Fᴏᴜɴᴅ {total_results} Rᴇsᴜʟᴛs ғᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}\n\n</b>"
