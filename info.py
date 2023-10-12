@@ -33,7 +33,7 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001767247355').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '770434685').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
+PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '770434685').split()]
 auth_channel = environ.get('AUTH_CHANNEL')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
@@ -45,28 +45,28 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://renamebot59:7872278427kd@cluster0.r3x0hwl.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://djmixpur:7872278427kd@cluster0.y66ueta.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'EvaMaria')
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', '')
-SHORTLINK_API = environ.get('SHORTLINK_API', '')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'urlstox.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', '5bac6cb8fa7801f13d873564a08afbd9a486c09c')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001919929458').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "10")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/requestgroup1')
-SPRT_CHNL = environ.get('SPRT_CHNL', 'https://t.me/netflixvillaindia1')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/netflixvilla_india')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Netflixvilla_india/46')
+SPRT_CHNL = environ.get('SPRT_CHNL', 'https://t.me/krbackup')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/krbackup')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/krbackup/7')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
-HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', 'https://t.me/+PkQmIhZMVDxhZmVl')
+HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', '')
 MSG_ALRT = environ.get('MSG_ALRT', 'Wʜᴀᴛ Aʀᴇ Yᴏᴜ Lᴏᴏᴋɪɴɢ Aᴛ ?')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001712126409'))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Netflixvilla_india')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001933509863'))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '@krbackup')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), False)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
